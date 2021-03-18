@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Order App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <style>
+        .row .col {
+            margin-top: 5px; margin-bottom: 5px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center p-5">
+
+            <!-- form -->
+            <form action="/" method="POST">
+
+                <!-- user -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="address" class="form-control" id="address" name="address" placeholder="address">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="email">
+                </div>
+
+                <!-- items -->
+                <div class="container" style="margin-top: 30px">
+                    <h5>shopping items</h5>
+                <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="item" name="item1-name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="qty" name="item1-qty">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="price" name="item1-price">
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="item" name="item2-name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="qty" name="item2-qty">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="price" name="item2-price">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="item" name="item3-name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="qty" name="item3-qty">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="price" name="item3-price">
+                    </div>
+                </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top: 60px">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "order-app",
+  "version": "1.0.0",
+  "description": "order management and status using mongoose",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudolphh/order-app-mongoose.git"
+  },
+  "keywords": [
+    "order",
+    "mongoose",
+    "mongodb",
+    "node",
+    "express"
+  ],
+  "author": "Rudy A Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rudolphh/order-app-mongoose/issues"
+  },
+  "homepage": "https://github.com/rudolphh/order-app-mongoose#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.1"
+  }
+}
