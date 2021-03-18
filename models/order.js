@@ -7,7 +7,9 @@ let order = new Schema({
     email: {type: String},
     items: [{
         itemName: {type: String}
-    }]
-});
+    }],
+    createdAt: {type:Date}
+    
+}, { timestamps: true });
 
 module.exports = mongoose.model('order', order, 'orders');

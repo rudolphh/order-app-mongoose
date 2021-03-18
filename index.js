@@ -13,13 +13,43 @@ app.use(express.urlencoded({
     extended: true
 }));
 
+let orderModel = require('./models/order');
+
+
+// api endpoints
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
 app.post('/', (req, res) => {
     console.log(req.body);
-    res.json(req.body);
+    let order = req.body;
+    order.items = [
+        { itemName: req.body.item1 },
+        { itemName: req.body.item2 },
+        { itemName: req.body.item3 },
+    ];
+    delete order.item1;
+    delete order.item2;
+    delete order.item3;
+
+    orderModel.create(order, (err, data) => {
+        if(err) res.status(500).send(err)
+        else {
+            console.log(data);
+            res.send('data inserted');
+        }
+    });
+
+});
+
+app.get('/orders', (req, res) => {
+    orderModel.find((err, data) => {
+        if(err) res.status(500).send(err);
+        else {
+            res.json(data);
+        }
+    });
 });
 
 
