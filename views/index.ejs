@@ -4,6 +4,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <style>
+
+        #main-container {
+          display: flex;
+          justify-content: center;
+        }
+
+        #main-row {
+          display: flex;
+          flex-direction: column;
+        }
+
+        #main-row h5 {
+          text-align: center;
+          color: green;
+        }
+
         .row .col {
             margin-top: 5px; margin-bottom: 5px;
         }
@@ -16,11 +32,17 @@
         .table input {
             border: 0;
         }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center p-5">
+    <div id="main-container" class="container">
+
+        <div id="main-row" class="row justify-content-center p-5">
+
+          <% if(message) { %> 
+                <h5><%= message %> </h5>
+          <% } %>
 
             <!-- form -->
             <form action="/" method="POST">
