@@ -49,6 +49,10 @@
         .table input {
             border: 0;
         }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
@@ -71,7 +75,7 @@
                     <% orders.forEach((order, index) => { %>
                     <tr>
                     <th scope="row">
-                        <input type="button" value="send email" 
+                        <input class="btn btn-primary" type="button" value="send email" 
                             data-order="<%= order._id %>"
                             data-email="<%= order.email %>"
                             data-user="<%= order.userName %>"
