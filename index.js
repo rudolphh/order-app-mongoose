@@ -1,20 +1,20 @@
-let express = require('express');
-let mongoose = require('mongoose');
-let db = mongoose.connect('mongodb+srv://rudyah.4umif.mongodb.net/mongo', {
+const express = require('express');
+const mongoose = require('mongoose');
+const db = mongoose.connect('mongodb+srv://rudyah.4umif.mongodb.net/mongo', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     user: 'ru',
     pass: 'Lilimi!(!3'
 });
 
-let path = require('path');
-let app = express();
+const path = require('path');
+const app = express();
 app.use(express.urlencoded({
     extended: true
 }));
 app.set('view engine', 'ejs');
 
-let orderModel = require('./models/order');
+const orderModel = require('./models/order');
 
 
 // api endpoints
