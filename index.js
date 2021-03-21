@@ -7,7 +7,6 @@ const db = mongoose.connect('mongodb+srv://rudyah.4umif.mongodb.net/mongo', {
     pass: 'Lilimi!(!3'
 });
 
-const path = require('path');
 const app = express();
 app.use(express.urlencoded({
     extended: true
