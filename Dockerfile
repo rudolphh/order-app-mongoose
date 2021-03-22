@@ -15,8 +15,7 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-# Sendgrid api key
-ENV SENDGRID_API_KEY='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'
+# add sgrid api key here
 
 EXPOSE 3000
 CMD [ "node", "index.js" ]
